@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "demo/ViewController.m"
-            timestampString = "419759005.054795"
+            timestampString = "419916283.048195"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "-changeBtnBGColor:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

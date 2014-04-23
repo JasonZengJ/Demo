@@ -22,7 +22,6 @@
     [self.window setRootViewController:navController];
     [self.window makeKeyAndVisible];
     
-    
     return YES;
 }
 							
