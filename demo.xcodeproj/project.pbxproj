@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		964AFF0D19077FDD00C51F59 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964AFF0C19077FDD00C51F59 /* SettingsTableViewController.m */; };
+		9656C74B1908D4BB001539F8 /* MoreFunctionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9656C74A1908D4BB001539F8 /* MoreFunctionView.m */; };
 		96CD7D921904E34900842F07 /* NextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CD7D911904E34900842F07 /* NextViewController.m */; };
 		96CD7D95190502FB00842F07 /* MouseMoveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CD7D94190502FB00842F07 /* MouseMoveView.m */; };
 		96D44B321904DD2E003DE75B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D44B311904DD2E003DE75B /* Foundation.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		964AFF0B19077FDD00C51F59 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		964AFF0C19077FDD00C51F59 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		9656C7491908D4BB001539F8 /* MoreFunctionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreFunctionView.h; sourceTree = "<group>"; };
+		9656C74A1908D4BB001539F8 /* MoreFunctionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreFunctionView.m; sourceTree = "<group>"; };
 		96CD7D901904E34900842F07 /* NextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextViewController.h; sourceTree = "<group>"; };
 		96CD7D911904E34900842F07 /* NextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextViewController.m; sourceTree = "<group>"; };
 		96CD7D93190502FB00842F07 /* MouseMoveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseMoveView.h; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				96D44B381904DD2E003DE75B /* Supporting Files */,
 				96D44B461904DD2E003DE75B /* ViewController.h */,
 				96D44B471904DD2E003DE75B /* ViewController.m */,
+				9656C7491908D4BB001539F8 /* MoreFunctionView.h */,
+				9656C74A1908D4BB001539F8 /* MoreFunctionView.m */,
 			);
 			path = demo;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				96D44B481904DD2E003DE75B /* ViewController.m in Sources */,
 				96CD7D921904E34900842F07 /* NextViewController.m in Sources */,
 				96CD7D95190502FB00842F07 /* MouseMoveView.m in Sources */,
+				9656C74B1908D4BB001539F8 /* MoreFunctionView.m in Sources */,
 				96D44B421904DD2E003DE75B /* AppDelegate.m in Sources */,
 				96D44B3E1904DD2E003DE75B /* main.m in Sources */,
 			);

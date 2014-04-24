@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "NextViewController.h"
 #import "MouseMoveView.h"
+#import "MoreFunctionView.h"
 
 @interface ViewController ()
 
@@ -21,6 +22,8 @@
    @property (nonatomic)CGFloat screenFullWidth;
    @property (nonatomic)CGFloat screenFullHeight;
    @property (nonatomic)UIColor* btnBgColor;
+   @property (nonatomic,retain)MoreFunctionView *moreView;
+   @property (nonatomic,retain)MouseMoveView *moveView;
 
 @end
 
@@ -34,7 +37,6 @@
     
     self.screenFullWidth  = [UIScreen mainScreen].bounds.size.width;
     self.screenFullHeight = [UIScreen mainScreen].bounds.size.height;
-    NSLog(@"%f",self.screenFullHeight - self.screenFullHeight *0.75 - 51);
     self.btnBgColor       = [UIColor colorWithRed:66.0f/255.0f green:66.0f/255.0f blue:66.0f/255.0f alpha:1.0f];
     self.mouseBtn         = [self createBtnWithFrame:CGRectMake(0, self.screenFullHeight * 0.73, 159, 50)        Title:@"Mouse Click"     clickAction:@selector(mouseBtnClick:)];
     self.vkBtn            = [self createBtnWithFrame:CGRectMake(160, self.screenFullHeight * 0.73, 160, 50)      Title:@"Virtual Keybord" clickAction:@selector(vkBtnClick:)];
@@ -46,16 +48,16 @@
 //    self.mouseBtn.layer.borderColor = [self.btnBgColor CGColor];
 //    self.mouseBtn.layer.borderWidth = 1.0f;
     
-    UIView *view          = [[MouseMoveView alloc] initWithFrame:CGRectMake(0, 65, self.screenFullWidth, self.screenFullHeight*0.73 - 65)];
+    _moveView          = [[MouseMoveView alloc] initWithFrame:CGRectMake(0, 65, self.screenFullWidth, self.screenFullHeight*0.73 - 65)];
     UILabel *label        = [[UILabel alloc]initWithFrame:CGRectMake(30, self.screenFullHeight * 0.3, self.screenFullWidth, 30)];
     
     [label setText:@"touch and move your finger here"];
     [label setTextColor:[UIColor whiteColor]];
-    [view setBackgroundColor:[UIColor redColor]];
-    [view addSubview:label];
+    [_moveView setBackgroundColor:[UIColor redColor]];
+    [_moveView addSubview:label];
     
     
-    [self.view addSubview:view];
+    [self.view addSubview:_moveView];
     [self.view addSubview:self.mouseBtn];
     [self.view addSubview:self.vkBtn];
     [self.view addSubview:self.settingBtn];
@@ -122,6 +124,39 @@
     
     [sender setBackgroundColor:[UIColor grayColor]];
     
+     if (!self.moreView) {
+        self.moreView = [[MoreFunctionView alloc] initWithFrame:CGRectMake(100, 100, 0, 0)];
+        self.moreView.backgroundColor = [UIColor whiteColor];
+    }
+   [self.view addSubview:self.moreView];
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.5];
+    self.moreView.frame = CGRectMake(100, 100, 200, 200);
+    self.moreView.backgroundColor = [UIColor blackColor];
+    self.moreView.frame = CGRectMake(100, 300, 200, 200);
+//    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.view cache:YES];
+//    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+//    [UIView setAnimationDelegate:self];
+//    [UIView setAnimationWillStartSelector:@selector(addMoreView:)];
+//    [UIView setAnimationDidStopSelector:@selector(setMoreViewFrame:)];
+    [UIView commitAnimations];
+//    [self.moveView setUserInteractionEnabled:false];
+    
+}
+
+- (void)addMoreView:(id)sender{
+    
+    if (!self.moreView) {
+        self.moreView = [[MoreFunctionView alloc] init];
+        self.moreView.backgroundColor = [UIColor whiteColor];
+    }
+    [self.view addSubview:self.moreView];
+    
+}
+
+- (void)setMoreViewFrame:(id)sender{
+    
+    self.moreView.frame = CGRectMake(100, 100, 100, 100);
     
 }
 
