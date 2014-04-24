@@ -129,8 +129,9 @@
     
     if (!self.alertView) {
         self.alertView = [[UIAlertView alloc]initWithTitle:@"alert!" message:message delegate:nil cancelButtonTitle:@"confirm" otherButtonTitles:nil];
+    } else {
+        [self.alertView setMessage:message];
     }
-    
     [self.alertView show];
     
 }
